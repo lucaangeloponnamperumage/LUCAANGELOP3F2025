@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define CK 1.20
+
+void importo()
+{
+    char nome[15];
+    float kmInizio;
+    float kmFine;
+    float kmPercorsi;
+    float importo;
+
+    printf("Inserisci il nome del conducente: ");
+    scanf("%s", nome);
+    printf("Inserisci il chilometraggio all'inizio del viaggio: ");
+    scanf("%f", &kmInizio);
+    printf("Inserisci il chilometraggio alla fine del viaggio: ");
+    scanf("%f", &kmFine);
+    kmPercorsi = kmFine - kmInizio;
+    importo = kmPercorsi * CK;
+    printf("Il conducente %s ha percorso %3.2f km e l'importo da pagare e' di %.2f euro.\n", nome, kmPercorsi, importo);
+}
+ int main()
+{
+    importo();
+    system("pause");
+    return 0;
+}
